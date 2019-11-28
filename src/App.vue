@@ -25,19 +25,6 @@
           <div class="logo block-alignment">
             <router-link to="/">Alpo</router-link>
           </div>
-          <!-- <ul class="nav-menu nav justify-content-end block-alignment">
-            <li class="nav-item indent-xl">
-              <router-link class="nav-link active" to="/">Home</router-link>
-            </li>
-            <li class="nav-item indent-xl nav-link active">
-              <router-link class="nav-link active" to="/account:id">Menu</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link active" to="/login"><i class="fas fa-user-alt"></i>
-              </router-link>
-            </li>
-          </ul> -->
-
           <ul class="nav-menu nav justify-content-end block-alignment">
             <li class="nav-item" v-for="link in links" :key="link.title">
               <router-link class="nav-link active" :to="`${link.url}`">
@@ -45,7 +32,6 @@
               </router-link>
             </li>
           </ul>
-
         </div>
       </div>
     </nav>
@@ -95,7 +81,7 @@
     position: fixed;
     width: 100%;
     color: #0ac5d6;
-    z-index: 1;
+    z-index: 2;
   }
 
   #topbar {

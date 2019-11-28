@@ -1,27 +1,44 @@
 <template>
     <div>
         <div class="page-content">
-            <div class="block-format bg-img">
-                <!-- <div class="block-format bg-img block-alignment" :style="{backgroundImage: `url(${bgURL})`}"> -->
-                <div class="title-block inner block-alignment">
-                    <div class="inner title-in tit-color">
-                        <h3 align="center">Welcome to</h3>
-                        <h4 align="center">WORK BOX</h4>
-                        <p align="center">This site is an example of project<br>built with my own.</p>
-                        <div class="btnBox inner block-alignment">
-                            <div class="signUpBtn block-alignment">
-                                Sign Up
-                                <router-link to="/register">
-                                    <svg width="180" height="45" viewBox="0 0 180 45"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect x='0' y='0' fill='none' width="180" height="45" rx="6"></rect>
-                                    </svg>
-                                </router-link>
+
+            <div id="carouselExampleIndicators" class="block-format carousel slide" data-ride="carousel" style="z-index: 1;">
+                <div class="carousel-inner">
+                    <div class="bg-img carousel-item active">
+                        <div class="title-block inner block-alignment">
+                            <div class="inner title-in tit-color">
+                                <h3 align="center">Welcome to</h3>
+                                <h4 align="center">WORK BOX</h4>
+                                <p align="center">This site is an example of project<br>built with my own.</p>
+                                <div class="btnBox inner block-alignment">
+                                    <div class="signUpBtn block-alignment">
+                                        Sign Up
+                                        <router-link to="/register">
+                                            <svg width="180" height="45" viewBox="0 0 180 45"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x='0' y='0' fill='none' width="180" height="45" rx="6"></rect>
+                                            </svg>
+                                        </router-link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="bg-img1 carousel-item">
+                    </div>
+                    <div class="bg-img2 carousel-item">
+                    </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="z-index: 2;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="z-index: 2;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
 
             <div class="block-format start-info-container">
                 <div class="inner info-in">
@@ -55,11 +72,11 @@
 </template>
 
 <script>
-    // import bgURL from './assets/background.png'
+    import bgURL from '../assets/background.png'
     export default {
         data() {
             return {
-                // bgURL
+                bgURL
             }
         }
     }
@@ -86,11 +103,18 @@
     }
 
     .bg-img {
-        /* background-color: rgb(29, 3, 41); */
-        /* background: linear-gradient(to top left, powderblue, pink); */
-        /* background: linear-gradient(to top left, rgb(245, 194, 29), rgb(154, 16, 167));  */
         background: linear-gradient(to top left, rgb(154, 16, 167), rgb(39, 11, 77));
-        /* background: linear-gradient(to top left, rgb(154, 16, 167),rgb(39, 11, 77));  */
+        height: 630px;
+    }
+
+    .bg-img1 {
+        background: linear-gradient(to top left, rgb(28, 185, 94), rgb(33, 10, 136));
+        height: 630px;
+    }
+
+    .bg-img2 {
+       
+        background: linear-gradient(to top left, rgb(243, 247, 8), rgb(132, 8, 163)); 
         height: 630px;
     }
 
@@ -165,6 +189,5 @@
         stroke-dasharray: 115, 107;
         stroke-dashoffset: 40;
     }
-
     /*--------------------------------------------------------*/
 </style>
